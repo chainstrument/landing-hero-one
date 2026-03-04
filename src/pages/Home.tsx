@@ -18,14 +18,21 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-24 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-4">Bienvenue chez Gardani</h2>
-          <p className="text-xl mb-8">Votre partenaire de confiance pour la garde de vos animaux de compagnie</p>
-          <Link to="/contact" className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">
-            Demander un devis
-          </Link>
+      {/* Hero Section with Image */}
+      <section className="relative h-96 overflow-hidden">
+        <img 
+          src="https://picsum.photos/1200/600?random=1" 
+          alt="Chiens heureux" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/80 to-purple-600/80 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h2 className="text-5xl font-bold mb-4">Bienvenue chez Gardani</h2>
+            <p className="text-xl mb-8">Votre partenaire de confiance pour la garde de vos animaux de compagnie</p>
+            <Link to="/contact" className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">
+              Demander un devis
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -34,35 +41,70 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Nos Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">🏠 Garde à domicile</h3>
-              <p className="text-gray-600">
-                Nous prenons soin de vos animaux dans le confort de leur environnement habituel.
-              </p>
+            <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition overflow-hidden">
+              <img 
+                src="https://picsum.photos/500/300?random=2" 
+                alt="Garde à domicile" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-blue-600 mb-3">🏠 Garde à domicile</h3>
+                <p className="text-gray-600">
+                  Nous prenons soin de vos animaux dans le confort de leur environnement habituel.
+                </p>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">🚶 Promenades</h3>
-              <p className="text-gray-600">
-                Des promenades régulières et stimulantes pour la santé et le bien-être de vos animaux.
-              </p>
+            <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition overflow-hidden">
+              <img 
+                src="https://picsum.photos/500/300?random=3" 
+                alt="Promenades" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-blue-600 mb-3">🚶 Promenades</h3>
+                <p className="text-gray-600">
+                  Des promenades régulières et stimulantes pour la santé et le bien-être de vos animaux.
+                </p>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">🐾 Jeux et activités</h3>
-              <p className="text-gray-600">
-                Des moments ludiques et enrichissants pour stimuler vos compagnons à quatre pattes.
-              </p>
+            <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition overflow-hidden">
+              <img 
+                src="https://picsum.photos/500/300?random=4" 
+                alt="Jeux et activités" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-blue-600 mb-3">🐾 Jeux et activités</h3>
+                <p className="text-gray-600">
+                  Des moments ludiques et enrichissants pour stimuler vos compagnons à quatre pattes.
+                </p>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">💊 Soins spécialisés</h3>
-              <p className="text-gray-600">
-                Administration de médicaments et soins spécifiques selon les besoins de votre animal.
-              </p>
+            <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition overflow-hidden">
+              <img 
+                src="https://picsum.photos/500/300?random=5" 
+                alt="Soins spécialisés" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-blue-600 mb-3">💊 Soins spécialisés</h3>
+                <p className="text-gray-600">
+                  Administration de médicaments et soins spécifiques selon les besoins de votre animal.
+                </p>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">📱 Suivi en temps réel</h3>
-              <p className="text-gray-600">
-                Photos et mises à jour régulières pour vous rassurer pendant votre absence.
-              </p>
+            <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition overflow-hidden">
+              <img 
+                src="https://picsum.photos/500/300?random=6" 
+                alt="Suivi en temps réel" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-blue-600 mb-3">📱 Suivi en temps réel</h3>
+                <p className="text-gray-600">
+                  Photos et mises à jour régulières pour vous rassurer pendant votre absence.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -72,15 +114,24 @@ export default function Home() {
       <section id="about" className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">À propos de nous</h2>
-          <div className="bg-blue-50 p-12 rounded-lg">
-            <p className="text-lg text-gray-700 mb-6">
-              Gardani est une entreprise spécialisée dans la garde d'animaux de compagnie avec plus de 10 ans d'expérience. 
-              Notre équipe de soigneurs qualifiés et passionnés s'engage à offrir les meilleurs soins à vos compagnons.
-            </p>
-            <p className="text-lg text-gray-700">
-              Nous comprenons l'importance de vos animaux pour vous et nous les traitons comme les nôtres. 
-              Sécurité, bien-être et affection sont au cœur de nos services.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://picsum.photos/500/400?random=7" 
+                alt="Notre équipe" 
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="bg-blue-50 p-8 rounded-lg">
+              <p className="text-lg text-gray-700 mb-6">
+                Gardani est une entreprise spécialisée dans la garde d'animaux de compagnie avec plus de 10 ans d'expérience. 
+                Notre équipe de soigneurs qualifiés et passionnés s'engage à offrir les meilleurs soins à vos compagnons.
+              </p>
+              <p className="text-lg text-gray-700">
+                Nous comprenons l'importance de vos animaux pour vous et nous les traitons comme les nôtres. 
+                Sécurité, bien-être et affection sont au cœur de nos services.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -90,7 +141,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Nos Tarifs</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md border-2 border-gray-200">
+            <div className="bg-white p-8 rounded-lg shadow-md border-2 border-gray-200 hover:border-blue-600 transition">
               <h3 className="text-2xl font-bold text-blue-600 mb-4">Garde quotidienne</h3>
               <p className="text-4xl font-bold text-gray-800 mb-6">25€ <span className="text-lg text-gray-600">/jour</span></p>
               <ul className="space-y-2 text-gray-600 mb-6">
@@ -98,17 +149,19 @@ export default function Home() {
                 <li>✓ Repas et jeux</li>
                 <li>✓ Photos quotidiennes</li>
               </ul>
+              <Link to="/contact" className="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Commander</Link>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md border-2 border-blue-600">
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">Garde complète</h3>
+            <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-blue-600 transform scale-105">
+              <h3 className="text-2xl font-bold text-blue-600 mb-4">Garde complète ⭐ Populaire</h3>
               <p className="text-4xl font-bold text-gray-800 mb-6">45€ <span className="text-lg text-gray-600">/jour</span></p>
               <ul className="space-y-2 text-gray-600 mb-6">
                 <li>✓ Garde toute la journée</li>
                 <li>✓ Promenades incluses</li>
                 <li>✓ Suivi en temps réel</li>
               </ul>
+              <Link to="/contact" className="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Commander</Link>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md border-2 border-gray-200">
+            <div className="bg-white p-8 rounded-lg shadow-md border-2 border-gray-200 hover:border-blue-600 transition">
               <h3 className="text-2xl font-bold text-blue-600 mb-4">Formule premium</h3>
               <p className="text-4xl font-bold text-gray-800 mb-6">60€ <span className="text-lg text-gray-600">/jour</span></p>
               <ul className="space-y-2 text-gray-600 mb-6">
@@ -116,6 +169,7 @@ export default function Home() {
                 <li>✓ Tous les services</li>
                 <li>✓ Vidéos quotidiennes</li>
               </ul>
+              <Link to="/contact" className="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Commander</Link>
             </div>
           </div>
         </div>
@@ -127,25 +181,40 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Avis de nos clients</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-yellow-50 p-8 rounded-lg shadow-md">
-              <p className="text-yellow-500 mb-4">⭐⭐⭐⭐⭐</p>
+              <img 
+                src="https://picsum.photos/100/100?random=8" 
+                alt="Marie" 
+                className="w-16 h-16 rounded-full mb-4 object-cover"
+              />
+              <p className="text-yellow-500 mb-3">⭐⭐⭐⭐⭐</p>
               <p className="text-gray-700 mb-4">
                 "Gardani s'est occupé de notre chien pendant nos vacances. Nous avons été rassurés par les photos quotidiennes et notre Milo était toujours heureux à notre retour!"
               </p>
-              <p className="font-bold text-gray-800">- Marie & Jean</p>
+              <p className="font-bold text-gray-800">Marie & Jean</p>
             </div>
             <div className="bg-yellow-50 p-8 rounded-lg shadow-md">
-              <p className="text-yellow-500 mb-4">⭐⭐⭐⭐⭐</p>
+              <img 
+                src="https://picsum.photos/100/100?random=9" 
+                alt="Sophie" 
+                className="w-16 h-16 rounded-full mb-4 object-cover"
+              />
+              <p className="text-yellow-500 mb-3">⭐⭐⭐⭐⭐</p>
               <p className="text-gray-700 mb-4">
                 "Service impeccable et équipe très professionnelle. Nos chats se sentent en confiance et nous aussi! Fortement recommandé."
               </p>
-              <p className="font-bold text-gray-800">- Sophie</p>
+              <p className="font-bold text-gray-800">Sophie</p>
             </div>
             <div className="bg-yellow-50 p-8 rounded-lg shadow-md">
-              <p className="text-yellow-500 mb-4">⭐⭐⭐⭐⭐</p>
+              <img 
+                src="https://picsum.photos/100/100?random=10" 
+                alt="Thomas" 
+                className="w-16 h-16 rounded-full mb-4 object-cover"
+              />
+              <p className="text-yellow-500 mb-3">⭐⭐⭐⭐⭐</p>
               <p className="text-gray-700 mb-4">
                 "Gardani s'occupe de notre lapin depuis 2 ans. Qualité de service exceptionnelle et prix honnête. On adore!"
               </p>
-              <p className="font-bold text-gray-800">- Thomas</p>
+              <p className="font-bold text-gray-800">Thomas</p>
             </div>
           </div>
         </div>
