@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useTheme } from './context/ThemeContext';
 
 export default function ContactForm() {
+  const { isDark } = useTheme();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,19 +27,19 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Formulaire de Contact</h2>
+    <div className={`${isDark ? 'bg-gray-900' : 'bg-gray-100'} flex items-center justify-center p-4 transition-colors`}>
+      <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-8 max-w-md w-full transition-colors`}>
+        <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-800'} mb-6 transition-colors`}>Formulaire de Contact</h2>
         
         {submitted && (
-          <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+          <div className={`mb-4 p-4 ${isDark ? 'bg-green-900 border-green-700 text-green-200' : 'bg-green-100 border-green-400 text-green-700'} border rounded transition-colors`}>
             Message envoyé avec succès !
           </div>
         )}
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 transition-colors`}>
               Nom
             </label>
             <input
@@ -47,13 +49,13 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+              className={`w-full px-4 py-2 ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-black placeholder-gray-400'} border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors`}
               placeholder="Votre nom"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 transition-colors`}>
               Email
             </label>
             <input
@@ -63,13 +65,13 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+              className={`w-full px-4 py-2 ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-black placeholder-gray-400'} border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors`}
               placeholder="votre@email.com"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="message" className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 transition-colors`}>
               Message
             </label>
             <textarea
@@ -79,7 +81,7 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               rows={5}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+              className={`w-full px-4 py-2 ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-black placeholder-gray-400'} border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none transition-colors`}
               placeholder="Votre message..."
             />
           </div>

@@ -4,7 +4,38 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>landing-hero-one</title>
+    <title>Gardani - Garde d'animaux</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      .hero-title {
+        font-family: 'Playfair Display', serif;
+        animation: slideInDown 0.8s ease-out, textGlow 2s ease-in-out infinite;
+      }
+      @keyframes slideInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes textGlow {
+        0%, 100% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        50% {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
+        }
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
