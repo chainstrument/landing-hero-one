@@ -10,7 +10,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white'} shadow-md sticky top-0 z-50 border-b transition-colors`}>
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-blue-600">🐾 Gardani</h1>
+          <h1 className="text-3xl font-bold text-gray-900">🐾 Gardani</h1>
           <div className="flex items-center space-x-6">
             <a href="#services" className={`${isDark ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'}`}>Services</a>
             <a href="#about" className={`${isDark ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'}`}>À propos</a>
@@ -35,7 +35,7 @@ export default function Home() {
           alt="Chiens heureux" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/80 to-purple-600/80 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/90 via-red-500/80 to-pink-600/90 flex items-center justify-center">
           <div className="text-center text-white">
             <h2 className="hero-title text-6xl font-black mb-4 tracking-tight">Bienvenue chez Gardani</h2>
             <p className="text-xl mb-8">Votre partenaire de confiance pour la garde de vos animaux de compagnie</p>
@@ -58,7 +58,7 @@ export default function Home() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-blue-600 mb-3">🏠 Garde à domicile</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">🏠 Garde à domicile</h3>
                 <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                   Nous prenons soin de vos animaux dans le confort de leur environnement habituel.
                 </p>
@@ -71,7 +71,7 @@ export default function Home() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-blue-600 mb-3">🚶 Promenades</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">🚶 Promenades</h3>
                 <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                   Des promenades régulières et stimulantes pour la santé et le bien-être de vos animaux.
                 </p>
@@ -84,7 +84,7 @@ export default function Home() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-blue-600 mb-3">🐾 Jeux et activités</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">🐾 Jeux et activités</h3>
                 <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                   Des moments ludiques et enrichissants pour stimuler vos compagnons à quatre pattes.
                 </p>
@@ -97,7 +97,7 @@ export default function Home() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-blue-600 mb-3">💊 Soins spécialisés</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">💊 Soins spécialisés</h3>
                 <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                   Administration de médicaments et soins spécifiques selon les besoins de votre animal.
                 </p>
@@ -110,7 +110,7 @@ export default function Home() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-blue-600 mb-3">📱 Suivi en temps réel</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">📱 Suivi en temps réel</h3>
                 <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                   Photos et mises à jour régulières pour vous rassurer pendant votre absence.
                 </p>
@@ -152,7 +152,7 @@ export default function Home() {
           <h2 className={`text-4xl font-bold text-center mb-12 transition-colors ${isDark ? 'text-white' : 'text-gray-800'}`}>Nos Tarifs</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className={`${isDark ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'} p-8 rounded-lg shadow-md border-2 hover:border-blue-600 transition`}>
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">Garde quotidienne</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Garde quotidienne</h3>
               <p className={`text-4xl font-bold mb-6 transition-colors ${isDark ? 'text-white' : 'text-gray-800'}`}>25€ <span className={`text-lg ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>/jour</span></p>
               <ul className={`space-y-2 mb-6 transition-colors ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                 <li>✓ Garde pendant 4 heures</li>
@@ -162,7 +162,7 @@ export default function Home() {
               <Link to="/contact" className="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Commander</Link>
             </div>
             <div className={`${isDark ? 'bg-gray-700 border-blue-500' : 'bg-white border-blue-600'} p-8 rounded-lg shadow-lg border-2 transform scale-105 transition`}>
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">Garde complète ⭐ Populaire</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Garde complète ⭐ Populaire</h3>
               <p className={`text-4xl font-bold mb-6 transition-colors ${isDark ? 'text-white' : 'text-gray-800'}`}>45€ <span className={`text-lg ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>/jour</span></p>
               <ul className={`space-y-2 mb-6 transition-colors ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                 <li>✓ Garde toute la journée</li>
@@ -172,7 +172,7 @@ export default function Home() {
               <Link to="/contact" className="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Commander</Link>
             </div>
             <div className={`${isDark ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'} p-8 rounded-lg shadow-md border-2 hover:border-blue-600 transition`}>
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">Formule premium</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Formule premium</h3>
               <p className={`text-4xl font-bold mb-6 transition-colors ${isDark ? 'text-white' : 'text-gray-800'}`}>60€ <span className={`text-lg ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>/jour</span></p>
               <ul className={`space-y-2 mb-6 transition-colors ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                 <li>✓ Garde 24h/24</li>
